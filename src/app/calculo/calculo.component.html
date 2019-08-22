@@ -1,0 +1,30 @@
+<div class="example-container">
+
+    <mat-card class="calc-card">
+        <p>
+            <mat-form-field appearance="standard">
+                <mat-label>Valor Imovel</mat-label>
+                <input type="text" matInput placeholder="Digite o valor do imóvel" [(ngModel)]="valorImovel" (blur)="regraValorFinanciamento()">
+                <mat-hint></mat-hint>
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field appearance="standard">
+                <mat-label>Valor Financiado</mat-label>
+                <input  type="text" matInput placeholder="Digite o valor fincanciado" [(ngModel)]="valorFinanciamento" (blur)="regraValorFinanciamento()">
+            </mat-form-field>
+
+        </p>
+        <p>
+            <mat-form-field appearance="standard">
+                <mat-label>Prazo Financiamento</mat-label>
+                <input  type="text" matInput placeholder="Prazo do fincanciamento em meses" [(ngModel)]="prazoFinanciamento">
+            </mat-form-field>
+        </p>
+        <p class="fr">
+            <button  mat-raised-button color="primary" (click)="calculo()" >Calcular</button>
+        </p>
+    </mat-card>
+
+   
+</div>
